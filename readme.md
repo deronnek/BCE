@@ -1,9 +1,11 @@
-The "best code ever".  That's tongue-in-cheek, in case you were wondering.
+# Introduction
+How I wrote the best code ever.  That's tongue-in-cheek, in case you were wondering.
 I'm sure there are more obfuscated examples of perl out there, but keep in mind:
 *I wasn't being intentionally obscure*
 
-This is effectively a case study in unreadable perl syntax, but also a lesson in
-giving the user what they need, not what they ask for.
+This is effectively a case study in unreadable perl syntax (I have since become
+a python zealot), but also a lesson in giving the user what they need, not what
+they ask for.
 
 # The task:
 
