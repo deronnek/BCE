@@ -5,22 +5,21 @@ I'm sure there are more obfuscated examples of perl out there, but keep in mind:
 This is effectively a case study in unreadable perl syntax, but also a lesson in
 giving the user what they need, not what they ask for.
 
-
-The task:
+# The task:
 
 Parse metadata fields from filenames (strings), separated by a delimiter.
 
-The catch:
+# The catch:
 
 Users wanted to be able to specify arbitrary delimiters and orderings of metadata fields.  
 
 After an embarassing number of iterations (two) of "ok, now we need the delimiters to be this character and the fields in this order" 
 I implemented a general solution so the users could specify whatever they wanted.
 
-The "solution":
+# The "solution":
 
 The problem amounts to allowing the user to specify a simplified regular expression.
-For example, the user would input a delimiter of '-' and pattern like this:
+For example, the user would input a delimiter of `-` and pattern like this:
 
 -date--author-
 
@@ -47,7 +46,7 @@ eval "\$file_format_regex =~ tr/$db_fw/$fw/";
 
 Where `file_format_regex` is the pattern specified by the user and read from the database.
 
-At this point I have the fields encapsulated by '%'.  I build a regex then apply it.
+At this point I have the fields encapsulated by `%`.  I build a regex then apply it.
 
 I'm replacing everything between percent signs with a *labeled* capture pattern
 The `(?` specifies that it's a labeled pattern, the `<$1>` labels it with what we're
