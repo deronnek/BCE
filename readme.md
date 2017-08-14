@@ -51,9 +51,9 @@ At this point I have the fields encapsulated by '%'.  I build a regex then apply
 
 I'm replacing everything between percent signs with a *labeled* capture pattern
 The `(?` specifies that it's a labeled pattern, the `<$1>` labels it with what we're
-matching in first part of the s/// from the format string (i.e., the labels).
-Then I just apply the regex, which populates the internal hash called %+ 
-See the section on %+ on this page: http://perldoc.perl.org/perlvar.html for more info
+matching in first part of the `s///` from the format string (i.e., the labels).
+Then I just apply the regex, which populates the internal hash called `%+` 
+See the section on `%+` on this page: http://perldoc.perl.org/perlvar.html for more info
 
 All that to say:
 ```
